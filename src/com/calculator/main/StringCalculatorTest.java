@@ -16,6 +16,7 @@ public class StringCalculatorTest {
 		assertEquals(9, stringcalc.add("9"));
 		assertEquals(3, stringcalc.add("1,2"));
 		assertEquals(11, stringcalc.add("5,6"));
+		assertEquals(16, stringcalc.add("5,6,5"));
 		}
 		catch(Exception e){
 			
@@ -40,6 +41,7 @@ public class StringCalculatorTest {
 		try {
 		assertEquals(2, stringcalc.add("1002,2"));
 		assertEquals(1, stringcalc.add("1,-2,5050"));
+		assertEquals(0, stringcalc.add("-5,-2,5050"));
 		}
 		catch(Exception e) {
 			
