@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 public class StringCalculator {
 	
-	public static int add(String numbers)
+	public int add(String numbers) throws Exception
 	{
 	int sum=0;	
 		if(numbers=="")
@@ -18,12 +18,9 @@ public class StringCalculator {
         {
        	 String delimiters = numbers.split("\n")[0];
             String secondDelimiter = null;
-            //Find delimiter
             delimiter = delimiters.substring(3, numbers.indexOf("]"));
             delimiters = delimiters.substring(numbers.indexOf("]") + 1);
-            // Multiple delimiter
             numbers = numbers.substring(numbers.indexOf("\n") + 1);
-            // Next delimiter
             if (delimiters.charAt(0) == '[')
                 secondDelimiter = delimiters.substring(1, delimiters.length() - 1);
 
@@ -46,7 +43,7 @@ public class StringCalculator {
 			 if(Integer.parseInt(String.valueOf(c))>=1000) {
      			continue;
      		}
-			 sum += Integer.parseInt(String.valueOf(c));		
+			 sum = sum + Integer.parseInt(String.valueOf(c));		
 		}
 	
 		 }
@@ -54,19 +51,14 @@ public class StringCalculator {
 			String errMsg = "negatives not allowed ";
 			for(int i=0;i<numb.length;i++) {        				
                 if (Integer.parseInt(numb[i]) < 0) {
-                	errMsg += numb[i] + " ";		
+                }
+    			System.out.println(errMsg + numb[i]);		
 }
-			}
-			System.out.println(errMsg);
+			
 		}
 		return sum;		
 	}
 	
-	public static void main(String args[])
-	{
-		int a= add("//[*][%]\\\\n1*2%3");
-		System.out.println(a);
-	}
-	
+
 
 }
