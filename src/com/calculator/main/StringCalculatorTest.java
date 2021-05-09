@@ -24,5 +24,10 @@ public class StringCalculatorTest {
 		assertEquals(3, stringcalc.add("//;\\n1;2"));
 		assertEquals(6, stringcalc.add("1\\n2,3"));
 	}
+	
+	@Test
+	public void test3(){		
+		assertEquals(2, stringcalc.add("1002,2"));
+	}
 
 }
