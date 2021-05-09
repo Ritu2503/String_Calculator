@@ -39,6 +39,7 @@ public class StringCalculatorTest {
 	public void test3(){
 		try {
 		assertEquals(2, stringcalc.add("1002,2"));
+		assertEquals(1, stringcalc.add("1,-2,5050"));
 		}
 		catch(Exception e) {
 			

@@ -48,11 +48,13 @@ public class StringCalculator {
 	
 		 }
 		catch(Exception ex){
-			String errMsg = "negatives not allowed ";
+			
 			for(int i=0;i<numb.length;i++) {        				
                 if (Integer.parseInt(numb[i]) < 0) {
+                	String errMsg = "negatives not allowed ";
+                	System.out.println(errMsg + numb[i]);
                 }
-    			System.out.println(errMsg + numb[i]);		
+    					
 }
 			
 		}
